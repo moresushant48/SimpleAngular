@@ -20,14 +20,16 @@ export class VolunteerformComponent implements OnInit {
   title = "Volunteer Detail";
 
   ngOnInit(): void {
+    this.blankForm();
+  }
 
+  blankForm(){
     this.volunteerForm = this.fb.group({
       vName: '',
       vEmailId: '',
       vMobileNo: '',
       vAddress: ''
     })
-    
   }
 
   registerVolunteer(volunteer : Volunteer) {
@@ -36,6 +38,7 @@ export class VolunteerformComponent implements OnInit {
     (response) => console.log(response),
     (error) => console.log(error)
     )
+    this.blankForm();
   }
 
 }

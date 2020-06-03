@@ -1,41 +1,13 @@
-<h1>{{title}}</h1>
-
-<form [formGroup]="volunteerForm" (ngSubmit)="registerVolunteer(volunteerForm.value)">
-
-    Value : {{ volunteerForm.value | json }}
-
+<form class="container bg-white p-md-5 p-4 border border-light rounded m-auto row justify-content-center" [formGroup]="volunteerForm" (ngSubmit)="registerVolunteer(volunteerForm.value)" style="width: 500px;">
+    <h2 class="text-primary mb-4 mx-auto">Become a Volunteer</h2>
     <hr>
-
-    <mat-form-field>
-        <input matInput type="text" formControlName="vName" id="vName" placeholder="Name">
-    </mat-form-field>
-
-    <mat-form-field>
-        <input matInput type="email" formControlName="vEmailId" id="vEmailId" placeholder="Email">
-    </mat-form-field>
-
-    <mat-form-field>
-        <input matInput type="text" formControlName="vMobileNo" id="vMobileNo" placeholder="Mobile No.">
-    </mat-form-field>
+    <input class="form-control mb-4" type="text" formControlName="vName" id="vName" placeholder="Name">  
     
-    <mat-form-field>
-        <textarea matInput formControlName="vAddress" id="vAddress" cols="22" rows="5"></textarea>
-        
-        
-    </mat-form-field>
+    <input class="form-control mb-4" type="email" formControlName="vEmailId" id="vEmailId" placeholder="Email">
 
-    <input type="submit" value="Submit">
+    <input class="form-control mb-4" type="text" formControlName="vMobileNo" id="vMobileNo" placeholder="Mobile No.">
+    
+    <textarea class="form-control mb-4" formControlName="vAddress" id="vAddress" cols="22" rows="5"></textarea>
+
+    <input class="btn btn-primary" type="submit" value="Submit">
 </form>
-
-<!-- <form action="http://localhost:9090/api/post/volunteer" name="volunteer" method="post">
-    <input type="text" name="name" id="name" placeholder="Name"><br><br>
-    <input type="email" name="email" id="email" placeholder="Email"><br><br>
-    <input type="text" name="mobile" id="mobile" placeholder="Mobile No."><br><br>
-    <textarea name="address" id="address" cols="22" rows="5"></textarea><br><br>
-    <input type="submit" value="Submit">
-</form> -->
-<!-- 
-<h3>{{volunteer.name}}</h3>
-<h3>{{volunteer.email}}</h3>
-<h3>{{volunteer.mobile}}</h3>
-<h3>{{volunteer.address}}</h3> -->
